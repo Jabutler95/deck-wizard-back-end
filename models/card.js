@@ -11,13 +11,14 @@ const cardSchema = new Schema({
     type: String,
     required: true
   },
+  types: {
+    type: String
+  },
   image: {
     type: String,
-    required: true 
   },
   text: {
     type: String,
-    required: true
   },
   colorIdentity: {
     type: String,
@@ -27,6 +28,10 @@ const cardSchema = new Schema({
     type: String,
     required: true
   },
+  cmc: {
+    type: Number,
+    required: true
+  },
   manaCost: {
     type: String,
     required: true
@@ -34,6 +39,12 @@ const cardSchema = new Schema({
   multiverseid: {
     type: String,
     required: true
+  }, 
+  power: {
+    type: String,
+  },
+  toughness: {
+    type: String
   } 
 },{
     timestamps: true,
