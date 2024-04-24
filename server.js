@@ -12,6 +12,7 @@ import './config/database.js'
 import { router as profilesRouter } from './routes/profiles.js'
 import { router as authRouter } from './routes/auth.js'
 import { router as decksRouter } from './routes/decks.js'
+import { router as indexRouter } from './routes/index.js'
 // import { router as cardsRouter } from './routes/cards.js'
 
 // create the express app
