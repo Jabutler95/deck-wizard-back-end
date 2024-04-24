@@ -5,6 +5,7 @@ const router = Router()
 
 // ========== Public Routes ===========
 router.post('/', decksCtrl.create)
+router.get('/', decksCtrl.index)
 
 export {
   router

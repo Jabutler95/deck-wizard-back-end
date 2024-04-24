@@ -10,6 +10,17 @@ async function create(req, res) {
   }
 }
 
+async function index(req, res) {
+  try {
+    const decks = await Deck.find({}).sort({ createdAt: 'desc' })
+    res.json(decks)
+  } catch (err) {
+    console.log(err)
+    res.json(err)
+  }
+}
+
 export {
   create,
+  index,
 }
