@@ -20,7 +20,29 @@ async function index(req, res) {
   }
 }
 
+async function show(req, res) {
+  try {
+    const deck = await Deck.findById(req.params.deckId)
+    res.json(deck)
+  } catch (err) {
+    console.log(err)
+    res.json(err)
+  }
+}
+
+async function deleteDeck(req, res) {
+  try {
+    const deck = await Deck.findByIdAndDelete(req.params.deckId)
+    res.json(deck)
+  } catch (err) {
+    console.log(err)
+    res.json(err)
+  }
+}
+
 export {
   create,
   index,
+  show,
+  deleteDeck as delete,
 }
